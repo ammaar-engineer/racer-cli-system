@@ -1,0 +1,97 @@
+[
+  {
+    "alias": ":racer",
+    "content": "racer help --command",
+    "description": "Get CLI tool guide"
+  },
+  {
+    "alias": ":info",
+    "content": "fastfetch",
+    "description": "Get OS info"
+  },
+  {
+    "alias": ":gcl",
+    "content": "git clone",
+    "description": "Clone a repository"
+  },
+  {
+    "alias": ":gcm",
+    "content": "git commit -m",
+    "description": "Commit changes with a message"
+  },
+  {
+    "alias": ":gpl",
+    "content": "git pull origin",
+    "description": "Pull latest changes from a specific branch"
+  },
+  {
+    "alias": ":gps",
+    "content": "git push origin",
+    "description": "Push local commits to a specific branch"
+  },
+  {
+    "alias": ":gst",
+    "content": "git status -s",
+    "description": "Get short status of working tree"
+  },
+  {
+    "alias": ":glg",
+    "content": "git log --oneline --graph --decorate",
+    "description": "View clean, graphical git commit history"
+  },
+  {
+    "alias": ":ni",
+    "content": "npm install",
+    "description": "Install node dependencies"
+  },
+  {
+    "alias": ":nr",
+    "content": "npm run",
+    "description": "Run defined npm script"
+  },
+  {
+    "alias": ":nd",
+    "content": "npm run dev",
+    "description": "Start local development server"
+  },
+  {
+    "alias": ":dcup",
+    "content": "docker-compose up -d",
+    "description": "Start docker containers in background"
+  },
+  {
+    "alias": ":dcdn",
+    "content": "docker-compose down",
+    "description": "Stop and remove docker containers"
+  },
+  {
+    "alias": ":dps",
+    "content": "docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}'",
+    "description": "List running containers with clean format"
+  },
+  {
+    "alias": ":ports",
+    "content": "sudo lsof -iTCP -sTCP:LISTEN -P",
+    "description": "List all active listening TCP ports"
+  },
+  {
+    "alias": ":myip",
+    "content": "curl ifconfig.me",
+    "description": "Get public IP address"
+  },
+  {
+    "alias": ":df",
+    "content": "df -h",
+    "description": "Check available disk space in human-readable format"
+  },
+  {
+    "alias": ":free",
+    "content": "free -h",
+    "description": "Check RAM usage (Linux only)"
+  },
+  {
+    "alias": ":cls",
+    "content": "clear",
+    "description": "Clear terminal screen"
+  }
+]
