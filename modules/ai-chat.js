@@ -2,7 +2,7 @@ import {OpenAI} from 'openai'
 import { configurationFileData } from './see-config.js'
 
 
-function setClient () {
+export function setClient () {
     const {configData} = configurationFileData()
     const ai_data = {
         ai_url: configData['ai_url'],
@@ -10,7 +10,7 @@ function setClient () {
         ai_modelId: configData['ai_modelId']
     }
     let client = null
-    if (!Object.values(ai_data).includes('')) {
+    if (!Object.values(ai_data).includes('') || !Object.values(ai_data) == null) {
         client = new OpenAI({
             apiKey: ai_data['ai_apiKey'],
             baseURL: ai_data['ai_url']

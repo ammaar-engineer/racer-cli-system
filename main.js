@@ -23,6 +23,7 @@ import { createChatPreferencesOption } from "./options/config/createChatPreferen
 import { seeConfigOption } from "./options/config/seeConfigOption.js"
 import { commandListOption } from "./options/help/commandListOption.js"
 import { clearSessionOption } from './options/ai/clearSessionOption.js'
+import { listBucketOption } from './options/bucket/listBucketOption.js'
 
 // Ensure .racer folder structure exists
 ensureRacerFolder()
@@ -47,7 +48,8 @@ const optionCategory = {
     "--create": createBucketOption,
     "--clear": clearBucketOption,
     "--delete": deleteBucketOption,
-    "--peek": peekBucketOption
+    "--peek": peekBucketOption,
+    "--list": listBucketOption
   },
   "config": {
     "--create-chat-preferences": createChatPreferencesOption,

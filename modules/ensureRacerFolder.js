@@ -21,7 +21,13 @@ export function ensureRacerFolder() {
     
     // Create config.racer with empty object if it doesn't exist
     if (!fs.existsSync(configPath)) {
-        fs.writeFileSync(configPath, JSON.stringify({}, null, 2))
+        fs.writeFileSync(configPath, JSON.stringify({
+            "current-chat-session": null,
+            "user-preferences": null,
+            "ai_modelId": null,
+            "ai_url": null,
+            "ai_apiKey": null
+        }, null, 2))
     }
     
     // Create aichat folder if it doesn't exist

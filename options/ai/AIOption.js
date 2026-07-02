@@ -1,4 +1,4 @@
-import {chatAi} from '../../modules/ai-chat.js'
+import {chatAi, setClient} from '../../modules/ai-chat.js'
 import { toolCallExecutions } from '../../modules/toolCallExecution.js'
 import os from 'os'
 import fs from 'fs'
@@ -6,6 +6,7 @@ import path from 'path'
 import { configurationFileData } from '../../modules/see-config.js'
 
 export async function AiOption(tool = false) {
+    setClient()
     const {configData} = configurationFileData()
     const chatSession = configData["current-chat-session"]
     if (!chatSession) {
