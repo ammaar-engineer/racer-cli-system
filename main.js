@@ -24,6 +24,8 @@ import { seeConfigOption } from "./options/config/seeConfigOption.js"
 import { commandListOption } from "./options/help/commandListOption.js"
 import { clearSessionOption } from './options/ai/clearSessionOption.js'
 import { listBucketOption } from './options/bucket/listBucketOption.js'
+import { textCompressOption } from './options/tool/TextCompressorOption.js'
+import { textUncompressText } from './options/tool/TextUncompressOption.js'
 
 // Ensure .racer folder structure exists
 ensureRacerFolder()
@@ -53,7 +55,7 @@ const optionCategory = {
   },
   "config": {
     "--create-chat-preferences": createChatPreferencesOption,
-    "--list": seeConfigOption
+    "--list": seeConfigOption,
   },
   "ai": {
     "--new-session": createChatSessionOption,
@@ -62,6 +64,10 @@ const optionCategory = {
     "--use-session": useSessionOption,
     "--chat": AiOption,
     "--clear-session": clearSessionOption
+  },
+  "tool": {
+    "--compress-text": textCompressOption,
+    "--uncompress-text": textUncompressText
   },
   "help": {
     "--command": commandListOption
