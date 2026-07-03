@@ -1,4 +1,6 @@
 # Racer CLI system
+Perlu diingat sistem ini membutuhkan backend nya. Berikut link repo backend nya [https://github.com/ammaar-engineer/racer-backend-system.git]
+Untuk saat ini sistem backend masih sedang dalam tahap development
 
 Sistem command telah diperbarui menjadi lebih readable dan mudah untuk diingat. Berikut list perintah-perintah CLI nya dan detail nya.
 1. **Sistem snippet**
