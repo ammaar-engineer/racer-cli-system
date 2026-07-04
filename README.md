@@ -137,7 +137,7 @@ Semua pengaturan dan folder sesi chat terletak pada folder **~/.racer** yang ber
 ```json
 {
   "snippets.racer": "Berisi semua list snippet yang telah di download",
-  "config.json": "Berisi isi konfigurasi termasuk AI dan juga sesi chat yang digunakan",
+  "config.racer": "Berisi isi konfigurasi termasuk AI dan juga sesi chat yang digunakan",
   "aichat": "folder tempat sesi chat berada"
 }
 ```
