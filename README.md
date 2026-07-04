@@ -1,9 +1,11 @@
 # Racer CLI system
-Perlu diingat sistem ini membutuhkan sistem backend nya. Berikut link repo backend nya [https://github.com/ammaar-engineer/racer-backend-system.git]
-Untuk saat ini sistem backend masih sedang dalam tahap development
+Perlu diingat sistem ini membutuhkan sistem backend nya. Berikut link repo backend nya https://github.com/ammaar-engineer/racer-backend-system.git
+Untuk saat ini sistem backend masih sedang dalam tahap development dan penyempurnaan
 
 Sistem command telah diperbarui menjadi lebih readable dan mudah untuk diingat. Berikut list perintah-perintah CLI nya dan detail nya.
-1. **Sistem snippet**
+
+## 1. **Sistem snippet**
+
 **Membuat snippet:** Untuk membuat snippet ada aturan nya. Snippet harus dibuat dalam bentuk sebuah array of object dan berada di dalam format file .racer, serta harus memiliki struktur seperti berikut.
 ```racer
 [
@@ -49,7 +51,9 @@ racer snippet --list
 ```
 Maka list snippet nya akan ditampilkan
 
-2. **Sistem file**
+
+## 2. **Sistem file**
+
 **Upload file:** Untuk upload file bisa menggunakan perintah
 ```bash
 racer file --upload file_target.txt namabucket
@@ -67,7 +71,8 @@ racer file --download file_target namabucket
 ```
 Maka file akan tersimpan di tempat dimana perintah tersebut dijalankan
 
-3. **Sistem bucket**
+## 3. **Sistem bucket**
+
 **Membuat bucket:** Untuk membuat bucket bisa menggunakan perintah
 ```bash
 racer bucket --create namabucket
@@ -94,7 +99,7 @@ racer bucket --peek namabucket
 racer bucket --list
 ```
 
-4. **Sistem AI**
+## 4. **Sistem AI**
 **Membuat sesi chat:** Untuk membuat sesi chat dengan AI. Gunakan perintah
 ```bash
 racer ai --new-session namasession.racer
@@ -132,7 +137,7 @@ Semua pengaturan dan folder sesi chat terletak pada folder **~/.racer** yang ber
 ```json
 {
   "snippets.racer": "Berisi semua list snippet yang telah di download",
-  "config.json": "Berisi isi konfigurasi termasuk AI dan juga sesi chat yang digunakan"
-  "aichat": folder tempat sesi chat berada
+  "config.json": "Berisi isi konfigurasi termasuk AI dan juga sesi chat yang digunakan",
+  "aichat": "folder tempat sesi chat berada"
 }
 ```
