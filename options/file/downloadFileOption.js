@@ -11,7 +11,7 @@ export async function downloadFileOption() {
         console.log(response.message)
         return
     }
-    console.log(response)
+    console.log("File has been downloaded")
     const child = spawn(`curl -o ${fileName} ${response.data.url}`, {shell: true})
     child.stdout.on('data', (bf) => {
         process.stdout.write(bf)

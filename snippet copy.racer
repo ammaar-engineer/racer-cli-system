@@ -1,0 +1,17 @@
+[
+  {
+    "alias": ":racer",
+    "content": "racer help --command",
+    "description": "Get CLI tool guide"
+  },
+  {
+    "alias": ":info",
+    "content": "fastfetch",
+    "description": "Get OS info"
+  },
+  {
+    "alias": ":gcl",
+    "content": "git clone",
+    "description": "Clone a repository"
+  },
+]

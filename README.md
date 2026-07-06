@@ -100,6 +100,9 @@ racer bucket --list
 ```
 
 ## 4. **Sistem AI**
+Sebelum memulai dengan sistem AI. Perlu diketahui bahwa untuk mengatur provider AI. Pergi ke path **~.racer/config.racer**
+dan set provider, API KEY, dan juga url dari provider AI kamu.
+
 **Membuat sesi chat:** Untuk membuat sesi chat dengan AI. Gunakan perintah
 ```bash
 racer ai --new-session namasession.racer
