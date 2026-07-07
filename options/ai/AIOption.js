@@ -4,8 +4,12 @@ import os from 'os'
 import fs from 'fs'
 import path from 'path'
 import { configurationFileData } from '../../modules/see-config.js'
+import { argsValidation } from '../../utilites/args-validation.js'
 
 export async function AiOption(tool = false) {
+    const userRequest = process.argv[4]
+    if (!argsValidation([userRequest])) { return }
+
     setClient()
     const {configData} = configurationFileData()
     const chatSession = configData["current-chat-session"]
@@ -13,7 +17,6 @@ export async function AiOption(tool = false) {
         console.log("Select chat session" + '\n')
         process.exit(1)
     }
-    const userRequest = process.argv[4]
     const conversationFile = path.join(
         os.homedir(),
         '.racer',

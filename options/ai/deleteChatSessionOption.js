@@ -1,10 +1,13 @@
 import fs from 'fs'
 import os from 'os'
 import path from 'path'
+import { argsValidation } from '../../utilites/args-validation.js'
 
 
 export function deleteChatSessionOption() {
     const selectedSession = process.argv[4]
+    if (!argsValidation([selectedSession])) { return }
+
     const pathToChatSession = path.join(
         os.homedir(),
         '.racer',

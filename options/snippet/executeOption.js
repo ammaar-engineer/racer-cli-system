@@ -2,18 +2,21 @@ import {spawn} from 'child_process'
 import fs from 'fs'
 import os from 'os'
 import path from 'path'
+import { argsValidation } from '../../utilites/args-validation.js'
 
 let textSnippet = {}
 const osHome = os.homedir() 
 
 export function executeOption() {
+  const userCommand = process.argv[4]
+  if (!argsValidation([userCommand])) { return }
+
   const pathSnippetJson = path.join(osHome, '.racer', 'snippets.racer')
   const snippetData = fs.readFileSync(pathSnippetJson)
   JSON.parse(snippetData.toString()).forEach(data => {
     textSnippet[data.alias] = data.content
   })
 
-  const userCommand = process.argv[4]
   let extractedCommand = []
   const rawCommand = userCommand.split(' ')
   rawCommand.forEach(command => {

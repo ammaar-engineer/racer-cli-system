@@ -1,11 +1,13 @@
-
 import { HOST } from '../../env.js'
 import fs from 'fs'
+import { argsValidation } from '../../utilites/args-validation.js'
 
 export async function uploadOneOption() {
   const formData = new FormData()
   const selectedFile = process.argv[4]
   const bucketName = process.argv[5]
+
+  if (!argsValidation([selectedFile, bucketName])) { return }
 
   const fileStream = fs.createReadStream(selectedFile)
   fs.stat(selectedFile, async (err, stat) => {

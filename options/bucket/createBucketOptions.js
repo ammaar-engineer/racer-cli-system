@@ -1,7 +1,10 @@
 import { HOST } from '../../env.js'
+import { argsValidation } from '../../utilites/args-validation.js'
 
 export async function createBucketOption() {
-    const bucketName = process.argv[4]
+    const bucketName = process.argv[4] ?? null
+    if (!argsValidation([bucketName])) { return }
+
     const res = await fetch(`${HOST}/bucket/create`, {
         method: 'POST',
         headers: {

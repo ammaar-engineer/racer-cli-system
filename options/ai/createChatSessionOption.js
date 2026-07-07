@@ -2,10 +2,13 @@ import fs from 'fs'
 import os from 'os'
 import path from 'path'
 import { configurationFileData } from '../../modules/see-config.js'
+import { argsValidation } from '../../utilites/args-validation.js'
 
 export function createChatSessionOption() {
-    const {configData, pathToConfig} = configurationFileData()
     const sessionName = process.argv[4]
+    if (!argsValidation([sessionName])) { return }
+    
+    const {configData, pathToConfig} = configurationFileData()
     const pathToSession = path.join(
         os.homedir(),
         '.racer',
