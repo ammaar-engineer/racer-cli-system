@@ -1,3 +1,5 @@
+import { configurationFileData } from "./modules/see-config.js"
 
-
-export const HOST = 'http://localhost:3000'
+const { configData } = configurationFileData()
+// export const HOST = 'http://backend.local.192.168.18.18.nip.io'
+export const HOST = configData["backend_host"]

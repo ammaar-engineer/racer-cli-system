@@ -18,6 +18,7 @@ function mapToLangChainMessages(jsonData) {
 
 export async function AiOption(tool = false) {
     const { configData } = configurationFileData()
+    const {configurationData} = configurationFileData()
     const chatSession = configData["current-chat-session"]
     if (!chatSession) {
         console.log("Select chat session" + '\n')

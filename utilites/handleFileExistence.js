@@ -1,7 +1,7 @@
 import fs from 'fs'
 
-export function createIfDidntExist({err, path, data}) {
-    if (err.code === 'ENOENT') {
-        const writeFile = fs.writeFileSync(path, data)
-    }
+export function createIfDidntExist({ err, path, data }) {
+  if (err.code === 'ENOENT') {
+    fs.writeFileSync(path, data)
+  }
 }

@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 import 'dotenv/config'
-import { spawn } from "child_process"
-import fs from 'fs'
 import { ensureRacerFolder } from "./modules/ensureRacerFolder.js"
 import { executeOption } from "./options/snippet/executeOption.js"
 import { uploadOneOption } from "./options/file/uploadOne.js"
 import { createBucketOption } from "./options/bucket/createBucketOptions.js"
 import { peekBucketOption } from "./options/bucket/peekBucket.js"
 import { createSnippetOption } from "./options/snippet/createSnippetOption.js"
-import {snippetDownloadOption} from './options/snippet/snippetSync.js'
+import { snippetDownloadOption } from './options/snippet/snippetSync.js'
 import { snippetLocalListOption } from "./options/snippet/snippetLocalListOption.js"
 import { downloadFileOption } from "./options/file/downloadFileOption.js"
 import { deleteFileOption } from "./options/file/deleteFile.js"
@@ -26,6 +24,7 @@ import { clearSessionOption } from './options/ai/clearSessionOption.js'
 import { listBucketOption } from './options/bucket/listBucketOption.js'
 import { textCompressOption } from './options/tool/TextCompressorOption.js'
 import { textUncompressText } from './options/tool/TextUncompressOption.js'
+import { setBackendHostOption } from './options/config/setBackendHostOption.js'
 
 // Ensure .racer folder structure exists
 ensureRacerFolder()
@@ -56,6 +55,7 @@ const optionCategory = {
   "config": {
     "--create-chat-preferences": createChatPreferencesOption,
     "--list": seeConfigOption,
+    "--set-host": setBackendHostOption
   },
   "ai": {
     "--new-session": createChatSessionOption,

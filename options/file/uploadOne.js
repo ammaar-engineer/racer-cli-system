@@ -3,7 +3,6 @@ import fs from 'fs'
 import { argsValidation } from '../../utilites/args-validation.js'
 
 export async function uploadOneOption() {
-  const formData = new FormData()
   const selectedFile = process.argv[4]
   const bucketName = process.argv[5]
 
@@ -11,7 +10,6 @@ export async function uploadOneOption() {
 
   const fileStream = fs.createReadStream(selectedFile)
   fs.stat(selectedFile, async (err, stat) => {
-    
     const res = await fetch(`${HOST}/file/upload`, {
       method: 'POST',
       body: fileStream,
@@ -23,7 +21,7 @@ export async function uploadOneOption() {
         'content-length': stat.size
       }
     })
-  
+
     const response = await res.json()
     console.log(response.data ?? response.message)
   })
