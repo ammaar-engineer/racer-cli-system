@@ -7,7 +7,10 @@ import { fileSelectionInFolder } from "../../modules/fileSelectionInFolder.js";
 export async function useSessionOption() {
   const selectedSession = await fileSelectionInFolder(
     path.join(os.homedir(), '.racer', 'aichat'),
-    "Select chat session:"
+    "Select chat session:",
+    {
+      emptyErr: "No session"
+    }
   )
 
   const { pathToConfig, configData } = configurationFileData()

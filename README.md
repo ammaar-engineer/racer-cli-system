@@ -150,10 +150,10 @@ racer ai --delete-session namasession.racer
 **Menggunakan session:** Untuk menggunakan session chat. Gunakan perintah
 
 ```bash
-racer ai --use-session namasession.racer
+racer ai --use-session
 ```
 
-Session yang dipilih akan digunakan dan kamu bisa lihat isi nya pada config.racer
+Nanti akan ada daftar session. Session yang dipilih akan digunakan dan kamu bisa lihat isi nya pada config.racer
 
 **Membersihkan seluruh session:** Untuk membersihkan seluruh session gunakan perintah
 
