@@ -23,14 +23,16 @@ export function commandListOption() {
                 '--create': 'Create a new bucket',
                 '--clear': 'Clear bucket contents',
                 '--delete': 'Delete a bucket',
-                '--peek': 'View bucket contents'
+                '--peek': 'View bucket contents',
+                '--list': 'List all buckets'
             }
         },
         config: {
             description: 'Manage configuration',
             actions: {
                 '--create-chat-preferences': 'Create chat preferences',
-                '--list': 'List current configuration'
+                '--list': 'List current configuration',
+                '--set-host': 'Set backend host URL'
             }
         },
         ai: {
@@ -42,6 +44,13 @@ export function commandListOption() {
                 '--use-session': 'Use a specific chat session',
                 '--chat': 'Start AI chat',
                 '--clear-session': 'Clear a chat session'
+            }
+        },
+        tool: {
+            description: 'Text processing tools',
+            actions: {
+                '--compress-text': 'Compress text',
+                '--uncompress-text': 'Uncompress text'
             }
         },
         help: {
